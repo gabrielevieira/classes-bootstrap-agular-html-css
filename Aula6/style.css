@@ -1,0 +1,111 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    background-color: #e1e0e0;
+    margin: 0;
+    font-family: Helvetica;
+    color: #3d3d3d;
+}
+
+body {
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #fff;
+    height: 43px;
+    padding: 6px 9px;
+    box-shadow: 0 2px 0 0 rgba(169, 169, 169, 0.5);
+}
+
+header h1 {
+    margin: 0px;
+    line-height: 43px;
+    width: 99px;
+    height: 43px;
+    font-size: 36px;
+    font-weight: bold;
+    line-height: normal;
+}
+
+.list {
+    padding: 12px 9px;
+}
+
+.list .title {
+    margin: 0;
+    font-size: 16px;
+    height: 19px;
+}
+
+.card {
+    min-height: 48px;
+    box-shadow: 0 2px 0 0 rgba(169, 169, 169, 0.5);
+    background-color: #ffffff;
+    border-radius: 4px;
+    padding: 6px 11px;
+    margin-top: 11px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    position: relative;
+}
+
+.photo {
+    width: 47px;
+    height: 47px;
+    border-radius: 50%;
+    box-shadow: 0 0 3 #ccc;
+    overflow: hidden;
+    position: relative;
+}
+
+.photo img {
+    width: 100%;
+}
+
+.card .content {
+    margin: 5px;
+    margin-left: 15px;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 305px) {
+    .card {
+        justify-content: center;
+    }
+    .card .content .nome {
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+.card .content .nome {
+    height: 22px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.card .content .email {
+    height: 13px;
+    font-size: 11px;
+    font-weight: 300;
+}
+
+.card .status {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: green;
+    top: 9;
+    left: 3px;
+    border: 2px solid;
+}
