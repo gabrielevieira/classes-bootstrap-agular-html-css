@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercicio 04</title>
+</head>
+<script>
+    function maiorIdade() {
+        let values = document.getElementById('values').value;
+
+         if(values) {
+               values = values.split(',');
+                values = values.map(value => parseFloat(value));
+
+            let idad = 18;
+            let maioresIdade = []
+
+             for (let i = 0; i < values.length; i++) {
+                 if(values[i] > idad ){
+                     maioresIdade.push(values[i])                     
+            }                                    
+        }
+        document.getElementById('maior').append(maioresIdade.length);
+        document.getElementById('menor').append(values.length - maioresIdade.length);
+
+    }
+
+    
+}
+
+
+
+</script>
+<body>
+<div>
+    <label>Informe a idade</label>
+    <input type="text" id="values">
+</div>
+    <div id="maior">Maior de 18: </div>
+    <div id="menor">Menor de 18: </div>
+
+<button onclick="maiorIdade()"> idade </button>
+</html>

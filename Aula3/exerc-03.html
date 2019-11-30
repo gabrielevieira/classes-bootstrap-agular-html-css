@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+    <script>
+        // Peça ao usuário para digitar 5 números em uma caixa de texto. Verifique qual é o maior número e exiba-o.
+
+        function numeroMaior() {
+            let values = document.getElementById('values').value;
+
+            if(values) {
+                values = values.split(','); // transforma em array
+                values = values.map(value => parseFloat(value));
+
+                let max = 0;
+
+                for (let i = 0; i < values.length; i++) {
+                    if(values[i] > max ){
+                        max = values[i];
+                    }
+                    
+                    
+                    
+                }
+                document.getElementById('resultado').append(max);
+
+            }
+
+            
+        }
+
+        function numeroMenor() {
+            let values = document.getElementById('values').value;
+
+            if(values) {
+                values = values.split(',');
+                values = values.map(value => parseFloat(value));
+
+                let min = 99;
+
+                for (let i = 0; i < values.length; i++) {
+                    if(values[i] < min ){
+                        min = values[i];
+                    }   
+
+                                          
+                }
+                document.getElementById('resultado').append(min);
+
+            }
+
+            
+        }
+        
+
+
+    </script>
+<body>
+        <div>
+            <label>Informe o número</label>
+            <input type="text" id="values">
+        </div>
+            <div id="resultado"></div>
+        
+        <button onclick="numeroMaior()">Qual é o numero maior</button>
+        <button onclick="numeroMenor()">Qual é o numero menor</button>
+</body>
+</html>

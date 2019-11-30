@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<!-- Faça um Programa que peça o valor da gasolina e do álcool de um posto e diga qual 
+é o combustível mais vantajoso abastecer, sabendo que somente é vantagem abastecer 
+álcool se o preço do mesmo é menor ou igual a 70% do valor da gasolina -->
+<script>
+    function qualAbastecer() {
+        let gasolina = parseFloat(document.getElementById('gasol').value)
+        let alcool = parseFloat(document.getElementById('alco').value)
+
+        if(alcool <= (gasolina*0.7)){                
+            document.write('é vantajoso abstecer com alcool')
+        } else {
+            document.write('é vantajoso abastecer com gasolina')
+        }         
+    }
+</script>
+
+
+<body>
+    <div>
+        <label>Valor da Gasolina</label>
+        <input type="text" id="gasol">
+    </div>
+    <div>
+        <label>Valor do alcool</label>
+        <input type="text" id="alco">
+    </div>
+    <button onclick="qualAbastecer()">Vantajoso abastecer ?</button>
+    <div></div>    
+</body>
+</html>

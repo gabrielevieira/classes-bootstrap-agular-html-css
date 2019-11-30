@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exerc-15</title>
+</head>
+<body>
+    <script>
+
+        let opcoes = window.prompt('Qual é o pais tem mais titulo? \n 1 - Brasil \n 2 - Alemanha \n 3 - Italia ')
+
+        switch (parseInt(opcoes)) {
+             case 1:
+                 document.write("<h1>Brasil = RESPOSTA CORRETA</h1>")
+                 break;
+             case 2: 
+             case 3: 
+                document.write("<h1>Alemanha e Itália  = RESPPOSTA INCORRETA !</h1>")
+                break;
+             default:
+                document.write("default = Por favor informe novamente !")
+                 break;
+        }        
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercicio MAP</title>
+    <script>
+            
+            let pessoas = ['Ana', 'Maria', 'João'];
+            document.write(pessoas);
+
+            let listaOrdenada = pessoas.map((item, index)=>{
+                return index + ' - ' + item;
+
+            let listaOrdenada = pessoas.map(item=>item) // vai clonar a lista de array
+
+            let listaOrdenada = pessoas.map(item=>`<p>${item}</p>`)
+
+            document.write(listaOrdenada.toString().replace(/(,)/g,'')); // regex
+
+            document.write('<br><br>')
+            listaOrdenada.forEach(p=>{
+                document.write(p); // não retornar a virgula
+            })
+
+
+
+
+
+
+            })
+
+
+            // MAP: Percorrer o array, alterar e devolver um novo array alterado
+
+    </script>
+</head>
+<body>
+   
+    
+</body>
+</html>

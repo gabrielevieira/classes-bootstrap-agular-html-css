@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<!-- Peça para o usuário digitar uma data.
+ Exiba separadamente o dia, o mês e o ano. (Obs.: não necessita de laço de repetição) -->
+ <script>
+
+    function separarDatas() {
+        let data = document.getElementById('date').value
+        data = data.split('-')
+        document.write('Ano : ' + data[0] );  
+        document.write('Mês : ' + data[1] ); 
+        document.write('Dia : ' + data[2] );  
+        
+    }
+
+ </script>
+<body>
+    <div>
+        <label>Informe a data mês e ano</label>
+        <input type="date" id="date" > 
+    </div>
+    <button onclick="separarDatas()">Separa as datas</button>    
+</body>
+</html>

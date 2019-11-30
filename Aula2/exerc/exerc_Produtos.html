@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercicio Casa</title>
+</head>
+<body> 
+     <form>
+         <div>
+             <label> Produto </label>
+                <input  id="prodNome" type="text" > 
+         </div>
+         <div>
+                <label> Valor de Custo R$ </label>
+                   <input  id="valorCust" type="number" > 
+        </div>         
+                <button onclick="adcionarProduto()" type="button" > Adcionar </button>
+                <button onclick="calculoRelatorio()" type="button" > Relatorio </button>
+        </form>
+   
+    
+    <script>
+
+        inputProd = document.getElementById('prodNome')
+        inputCust = document.getElementById('valorCust')
+
+        let produtos = [];
+        
+        function adcionarProduto() {
+           produtos.push({nome:inputProd.value, precoCusto:inputCust.value});    
+        }
+        console.log(produtos)  
+
+        // let produtosRelatorio = calculoRelatorio(produtos, 0.35); 
+        let perLucro = 1.35
+
+       
+        function calculoRelatorio() {         
+            let produtosRelatorio =  produtos.map(item =>{
+                item.valorFinal = item.precoCusto * perLucro;
+                return item;
+
+            });
+
+            produtosRelatorio.forEach(item => {
+                 document.writeln(`<p>Nome: <b>${item.nome}: `)
+                 document.writeln(`</b>Valor Final: R$ ${item.valorFinal}</p>`)     
+                });     
+        }
+  
+          
+
+
+
+           
+    
+    
+    
+    
+    
+    
+    
+    </script>
+
+
+</body>
+</html>

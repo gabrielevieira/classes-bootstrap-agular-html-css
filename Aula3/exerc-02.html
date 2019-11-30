@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercicio 02</title>
+</head>
+
+<script>
+    //   Faça um programa que entre com cinco números e imprima o quadrado de cada número.
+
+    function calcQuadrado() {
+        let values = document.getElementById('values').value;
+
+        if(values){
+            values = values.split(',');
+        
+        for (let i = 0; i < values.length; i++) {
+            let valor = parseFloat(values[i]);
+            let result = Math.pow(values[i], 2); // math.pow retorna a base elevada ao expoente
+
+            document.getElementById('resultado').append(result); // append como se fosse o push do array
+             
+            
+             }
+        }
+    }
+
+    
+
+
+
+</script>
+
+<body>
+    <div>
+        <label>Informe o número</label>
+        <input type="text" id="values">
+    </div>
+    <div id="resultado"></div>
+
+    <button onclick="calcQuadrado()">Calcula Valor</button>
+   
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- Crie um programa que entre com os dados de altura e sexo de 5 pessoas. Imprima na tela quantas pessoas são do sexo masculino e quantas pessoas são do sexo feminino. 
+        Mostre também qual é a maior altura e se essa altura é de um homem ou uma mulher. -->
+    </head>
+    <body>
+        <form id="form">                
+            <p> Sexo : </p>
+            <input type="radio" name="gender" value="male"> Male<br>
+            <input type="radio" name="gender" value="female"> Female<br>
+            
+            
+            <div>
+                <label> Altura </label>
+                <input  name="altura" type="number" > 
+            </div>  
+        </form> 
+        <button onclick="adcionar()" type="button" > Adcionar </button>
+        <button onclick="sexoPessoas()" type="button" > Relatorio Quantidade </button>
+        <button onclick="maiorAltura()" type="button" > Relatorio Altura </button>
+    </div>
+    <div id="qtdMasc"></div>
+    <div id="qtdFem"></div>
+    <div id="maxAlt"></div>
+</body>
+
+
+<script>
+    
+    let sexFeminino = [];
+    let sexMasc = [];
+    let info = [];
+    
+    
+    function adcionar() {
+        let form = new FormData(document.getElementById('form'));  
+        info.push({sexo:form.get('gender'), altura:parseFloat(form.get('altura'))});    
+    }        
+    
+    function sexoPessoas() {   
+        //  Imprima na tela quantas pessoas são do sexo masculino e
+        //  quantas pessoas são do sexo feminino.
+        sexFeminino = [];
+        sexMasc = [];
+        for (let i = 0; i < info.length; i++) {
+            if( info[i].sexo == 'male' ){
+                sexMasc.push(info[i]); 
+            } else {
+                sexFeminino.push(info[i]);
+            }
+            document.getElementById('qtdMasc').innerText = 'Total Masc: ' + sexMasc.length;
+            document.getElementById('qtdFem').innerText = 'Total Fem: ' + sexFeminino.length;   
+        } 
+    }                       
+    
+    function maiorAltura() {
+        // Mostre também qual é a maior altura e se essa altura é de um homem ou uma mulher
+        let maxAltura = 0
+        let altura;
+        let sexo;
+        
+        for (let i = 0; i < info.length; i++) {
+            if( info[i].altura > maxAltura ){
+                altura = info[i].altura;
+                sexo = info[i].sexo;  
+                
+                
+            }
+            document.getElementById('maxAlt').innerText = ' Maior Altura :' + altura + 'Sexo :' + sexo ;
+            
+        }
+        
+    }
+</script>
+
+
+</html>
