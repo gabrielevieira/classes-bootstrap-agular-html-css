@@ -43,7 +43,7 @@ header h1 {
 }
 
 .card {
-    height: 47px;
+    min-height: 48px;
     box-shadow: 0 2px 0 0 rgba(169, 169, 169, 0.5);
     background-color: #ffffff;
     border-radius: 4px;
@@ -51,7 +51,8 @@ header h1 {
     margin-top: 11px;
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
 .photo {
@@ -69,6 +70,19 @@ header h1 {
 .card .content {
     margin: 5px;
     margin-left: 15px;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 305px) {
+    .card {
+        justify-content: center;
+    }
+    .card .content .nome {
+        justify-content: center;
+        text-align: center;
+    }
 }
 
 .card .content .nome {
