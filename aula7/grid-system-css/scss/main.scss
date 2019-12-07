@@ -1,0 +1,29 @@
+.container {
+    h1{
+        font-size: 12px;
+    }
+}
+
+.flex-grid{    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    width: 100%;
+@for $i from 1 through 12 {
+    .col-#{$i}{
+        width: #{90% / 12 * $i}; 
+    } 
+}
+
+@media screen and (max-width: 600px){
+    @for $i from 1 through 12 {
+        .col-md-#{$i}{
+            width: #{95% / 12 * $i};
+
+        }
+    }
+}
+
+}
