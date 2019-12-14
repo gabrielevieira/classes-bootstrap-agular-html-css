@@ -1,0 +1,151 @@
+$textColor: #323232;
+$bgColor: #e8e8e8;
+
+body, html{
+    background-color: $bgColor;
+    font-family: 'open sans';
+    color: $textColor;
+
+}
+
+.bt-light{
+    background-color: #fff !important;
+}
+
+.navbar{
+    height: 98px;
+
+.navbar-brand {
+    font-size: 36px;
+    font-weight: bold;
+  }
+
+  button{
+      &.navbar-toggler{
+          border: none;
+          outline: none;
+      }
+      .material-icons{
+        color: $textColor;
+        font-size: 36px;
+
+      }
+  }
+
+  .logout-btn{
+      cursor: pointer;
+      user-select: none;
+
+      &:active{
+          opacity: 0.7;
+      }
+  }
+}
+
+.container{
+    margin-top: 83px;
+    max-width: 610px;
+
+    .card{
+        .card-header, .card-footer, .card-body{
+            background-color: #fff;
+            border: none
+
+        }
+        .card-header{
+            display: flex;
+            position: relative;
+            img{
+                width: 66px;
+                height: 66px;
+            }
+
+            .content-header{
+                margin-left: 17px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                .name{
+                    font-size: 16px;
+                    font-weight: 600;
+                    font-style: italic;
+
+                }
+
+                .time{
+                    background-color: $bgColor;
+                    text-align: center;
+                    font-size: 12px;
+                    border-radius: 20px;
+                    color: rgba($textColor, 0.4)    
+                }
+
+                button{
+                    position: absolute;
+                    right: 21px;
+                    top:14px;
+                    width: 50px;
+                    border-radius:50%;
+                    height: 50px;
+                    padding: 15px;
+
+                    i{
+                        font-size: 18px;
+                    }
+
+                }
+
+            }
+      
+         }
+     }
+        
+        .card-body{
+            font-size: 14px;
+            line-height: 1.29;
+            color: rgba($textColor, 0.6);
+            
+            .likes{
+                position: relative;
+                display: flex;
+
+                div{
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50%;
+                    box-shadow:  0 2px  17px 0 rgba(5, 5, 5, 0.1);
+                    background-color: #fff;
+                    padding: 4px;
+                    display: flex;
+                    justify-content: center;
+
+                }               
+
+                .like {
+                    z-index: 4;
+                    margin-left: -4.6px;
+                }
+                .core {
+                    z-index: 3;
+                    margin-left: -4.6px;
+                }
+                .mad {
+                    z-index: 2;
+                    margin-left: -4.6px;
+                }
+
+                label{
+                    font-size: 12px;
+                    font-weight: 600 ;
+                    font-style: italic;
+                    margin-left: 5px;
+                    margin-bottom: 0px;
+                    line-height: 20px;
+                    color: rgba($textColor, 0.4);
+
+                }
+
+            }
+    }
+}
