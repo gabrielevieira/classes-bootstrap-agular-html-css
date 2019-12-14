@@ -1,10 +1,12 @@
 $textColor: #323232;
 $bgColor: #e8e8e8;
+$minWidght: 400px;
 
 body, html{
     background-color: $bgColor;
     font-family: 'open sans';
     color: $textColor;
+    min-width: $minWidght;
 
 }
 
@@ -13,7 +15,7 @@ body, html{
 }
 
 .navbar{
-    height: 98px;
+    min-height: 98px;
 
 .navbar-brand {
     font-size: 36px;
@@ -32,6 +34,7 @@ body, html{
       }
   }
 
+  
   .logout-btn{
       cursor: pointer;
       user-select: none;
@@ -45,11 +48,16 @@ body, html{
 .container{
     margin-top: 83px;
     max-width: 610px;
+    margin-top: 150px;
 
     .card{
+        border-radius: 30px;
+        margin-top: 30px;
+
+        
         .card-header, .card-footer, .card-body{
             background-color: #fff;
-            border: none
+            border: none;
 
         }
         .card-header{
@@ -74,11 +82,12 @@ body, html{
                 }
 
                 .time{
-                    background-color: $bgColor;
+
                     text-align: center;
                     font-size: 12px;
                     border-radius: 20px;
-                    color: rgba($textColor, 0.4)    
+                    color: rgba($textColor, 0.4);  
+                    background-color: rgba(0,0,0,0.05);
                 }
 
                 button{
@@ -147,5 +156,50 @@ body, html{
                 }
 
             }
+    }
+
+    .card-footer{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        float: left;
+
+        button{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            height: 35px;
+            border-radius: 17.5pc;
+            box-shadow: 0 3px 30px 0 rgba(0, 0, 0, 0.1);
+            font-size: 14px;
+            font-weight: 600;
+            font-style: italic;
+            color: rgba(0, 0, 0, 0.4);
+            margin-left: 12px;
+            min-width: 110px;
+
+            i{
+                margin-right: 12px;
+            }
+                        
+            &:active{
+                background-color: darken(#fff, 20%);
+                color: #fff !important;
+            }
+
+        }
+    }
+    
+    @media screen and (max-width: 600px){
+        .card{
+            background-color: transparent !important;
+            border: none;
+            .card-header, .card-footer{
+                background-color: transparent !important;
+            }
+
+        }
+        
     }
 }
