@@ -1,0 +1,4 @@
+1 - npm init y
+2 - npm install node-sass --save-dev
+3 - packge.json = s: "scss:dev": "node-sass ./scss/style.scss ./css/style.css -w"
+4 - npm run scss:dev

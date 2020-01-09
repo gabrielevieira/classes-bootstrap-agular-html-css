@@ -1,0 +1,28 @@
+$textColor: #323232;
+$bgColor: #e8e8e8;
+$minWidght: 400px;
+
+.navbar {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.05);
+  background-color: #353535;
+
+  .navbar-brand {
+    font-size: 36px;
+    font-weight: bold;
+  }
+
+  button {
+    &.navbar-toggler {
+      border: none;
+      outline: none;
+    }
+    .material-icons {
+      color: $textColor;
+      font-size: 36px;
+    }
+  }
+
+  .collapse {
+    flex-direction: row-reverse;
+  }
+}
