@@ -1,0 +1,38 @@
+html {
+    background-color: black;
+    color: white;
+    font-size: 23px;
+    text-align: center;
+    padding: 10px 10px;
+}
+
+.form{
+    margin-top: 100px;
+
+}
+
+.classPeso{
+    margin-top: 10px;
+
+}
+
+.altura{
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+
+.botoes{
+    margin-top: 40px;
+}
+
+.imc{
+    border: solid 1px blue;
+    width: 208px;
+    background-color: blue;
+    border-radius: 19px;
+    margin-left: 566px;
+}
+
+
+

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="style.css">
+    <title>Exercicio Verificador de Idade</title>
+</head>
+
+<body>
+    <header>
+        <label>
+            <h1>Verificador de Idade</h1>
+        </label>
+    </header>
+
+
+    <section>
+        <div>
+            <label> Ano de Nascimento: </label>
+            <input id="dataNsc" type="number">
+        </div>
+
+        <div>
+            <label>Sexo: </label>
+            <div id="sexoInput">
+                <input type="radio" name="radsex" id="checMsc" checked>Masculino
+                <input type="radio" name="radsex" id="checFem">Feminino
+            </div>
+        </div>
+
+        <div>
+            <button onclick="verificador()">Verificar</button>
+        </div>
+
+        <div id="res">
+            <label>Preencha os dados !!</label>
+
+        </div>
+
+
+
+
+    </section>
+
+    <footer>
+        <p>
+            &copy;CursoemVideo
+        </p>
+
+    </footer>
+    <script src="exerc2.js"></script>
+
+
+</body>
+
+</html>

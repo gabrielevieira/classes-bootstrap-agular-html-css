@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="professor.js"></script>
+    <script src="aluno.js"></script>
+    <title>Dados Prof e Aluno</title>
+</head>
+
+<body>
+    <script>
+        aluno = new Aluno();
+        aluno.nota1 = 8;
+        aluno.nota2 = 10;
+        aluno.nome = "Gabriel";
+        aluno.idade = 23;
+        aluno.cidade = "Florianópolis";
+        aluno.email = "gabriel@gmail.com";
+        aluno.telefone = 8282882828;
+
+        prof = new Professor();
+        prof.materia = "Matemática";
+        prof.nome = "Leandro";
+        prof.idade = 40;
+        prof.cidade = "Florianópolis";
+        prof.email = "leandro@gmail.com";
+        prof.telefone = 8282882828;
+
+        prof.listar();
+        aluno.listar();
+    </script>
+
+
+</body>
+
+</html>

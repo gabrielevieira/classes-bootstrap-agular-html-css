@@ -1,0 +1,31 @@
+html{
+    background-color:#202020;   
+     
+}
+
+.container{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace;
+    color: white;
+    display: flex;
+    
+}
+.img{
+    margin-left: 129px;
+    margin-top: 152px;
+}
+
+.conteudo{
+    border-style: solid;
+    border-width: 2px;
+    width: 430px;
+    margin-top: 77px;
+}
+
+@media only screen and (max-width: 600px) {
+    .container {background: red;}
+  }
+
+    
