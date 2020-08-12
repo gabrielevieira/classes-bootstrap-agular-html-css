@@ -1,3 +1,3 @@
 # Exercicios JS
 
-Material de Estudos para apreender Angular, Css, Javascript
+Material de Estudos para apreender html, Css, Javascript, Angular
